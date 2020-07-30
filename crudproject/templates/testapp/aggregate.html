@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+{% extends 'testapp/base.html'%}
+{% block body_block  %}
+<h1>Employee Aggregate Information</h1><hr>
+<form  method="post">
+  {{form.as_p}}
+  <ul>
+    <li>Average Salary:{{avg}}</li>
+    <li>Max Salary:{{max}}</li>
+    <li>Min Salary:{{min}}</li>
+    <li>Total Salary:{{sum}}</li>
+    <li>Number Of Employess:{{count}}</li>
+  </ul>
+{%csrf_token%}
+</form>
+{%endblock%}
