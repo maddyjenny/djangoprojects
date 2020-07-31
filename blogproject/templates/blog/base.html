@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+{%load blog_tags%}
+{%load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>{% block title_block %}{% endblock %}</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="{%static "css/blog1.css" %}">
+  </head>
+  <body>
+    <div class="content" >
+    {% block content %}{% endblock %}
+  </div>
+  <div class="sidebar">
+    <h2>Maddy Blog</h2>
+   <p>Total number of Published Posts upto today:  <span> {% my_tag %} </span></p>
+   <h3>Latest Posts:{%show_latest_posts 4%}</h3>
+   <h3>most_commented:{%most_commented as Most_commented%}</h3>
+   {%for post in Most_commented%}
+   <a href="{{post.get_absolute_url}}"><em><h2>{{post.title}}</h2></em></a>
+   {%endfor%}
+
+  </div>
+  </body>
+</html>

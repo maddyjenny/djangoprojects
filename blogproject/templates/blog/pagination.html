@@ -1,0 +1,9 @@
+<div class="paginator">
+  {%if page.has_previous%}
+  <button type="button" name="PREVIOUS"><a href="?page={{page.previous_page_number}}">PREVIOUS</a> </button>
+  {%endif%}&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+  <span>Page {{page.number}} of {{page.paginator.num_pages}}</span> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+{%if page.has_next%}
+<button type="button" name="NEXT"><a href="?page={{page.next_page_number}}">NEXT</a> </button>
+{%endif%}
+</div>
